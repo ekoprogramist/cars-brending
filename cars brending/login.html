@@ -1,18 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- css start -->
     <style>
         body {
-            background-color: black;
+                background: rgb(230, 230, 255);
+                color: rgb(0, 0, 0);
+                padding: 10px;
+                font-family: Georgia;
+                text-align: center;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            [id=all-contents] {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav
+             {
+                background: rgb(239, 80, 41);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+                border-radius:2em;
+                border-top-left-radius:2em;
+                border-top-right-radius:2em;
+                border-bottom-right-radius:2em;
+                border-bottom-left-radius:2em;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            [class=sidebar] img {
+                width: 200px;
+            }
+            [class=content] {
+                flex: 1;
+                padding: 15px;
+            }
+            [class=interests] header {
+                font-size: 1.25em;
+            }
+
+        button {
+            background-color: #04AA6D; /* Green */
+            border: none;
             color: white;
-            font-size: larger;
-            font-weight: 340;
+            padding: 15px 32px;
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
         }
      
-        button {
+
+        input {
+            font-size: 100%;
+            font-weight: 100;
             color: black;
-            background-color: white;
+           
+        }
+
+            /* unvisited link */
+        a:link {
+            color: red;
+        }
+
+            /* visited link */
+        a:visited {
+            color: green;
+        }
+
+            /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+            /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        label {
+            font-weight: 56;
+            font-size: medium;
         }
     </style>
    
@@ -21,27 +121,25 @@
 <body>
     <div class="login-box">
         <form action="">
-            <h2>login</h2>
             <div class="input-box">
+                <label><h3>Email</h3></label>
                      <input type="email" required>
-                     <label>Email</label>
             </div>
-                <br>
             <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="password" required>
-                <label>Password</label>
+                <label><h3>Password</h3></label>
+                <input type="password" required  minlength="12">
                 <div class="remember-forgot"></div>
+                <br>
+                <!-- login code done! -->
                 <label><input type="checkbox" required>Remember me</label>
                 <br>
                 <a href="#">forgot password?</a>
                 <br>
                 <br>
-                <a href="Work 1.html"><button type="submit">Login</button></a>
                 <div class="register-link">
                     <p>Don't have any accaunt? <a href="#">Register</a></p>
                 </div>
+                <a href="Work 1.html"><button type="submit">login</button></a>
         </form>
     </div>
-    
 </body>
